@@ -109,12 +109,15 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 ![Script logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/pythonScript.png?raw=true)
 
 5. Head over to AWS Cloudwatch
+
 ![AWS CloudWatch Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/cloudWatchAWS.png?raw=true)
 
 6 *Click on Logs*
+
 ![AWS Logs logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsLogsImage.png?raw=true)
 
 7.) You should see your apache logs 
+
 ![AWS Apache Logs Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/logImage.png?raw=true)
 
 # Step 4: Configure a Metric in the Logs
