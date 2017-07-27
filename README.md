@@ -78,6 +78,6 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 * You can leave the default output format blank
 * When prompt for the Log stream name, enter option 3 and type "Apache Error Logs"
 * Chose a timestamp for your output
-* One the configuration is complete you should run 'sudo service awslogs restart`
+* One the configuration is complete you should run `sudo service awslogs restart`
 
 ![Script logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/Screen%20Shot%202017-06-23%20at%203.15.52%20PM.png?raw=true)
