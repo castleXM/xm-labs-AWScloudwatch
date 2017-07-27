@@ -67,3 +67,5 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
      region = us-east-1
      aws_access_key_id = <YOUR ACCESS KEY>
      aws_secret_access_key = <YOUR SECRET KEY> ```
+ 
+1. Next, we will need to configure which logs we want to track
