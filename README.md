@@ -45,7 +45,31 @@ The CloudWatch Logs agent supports IAM roles and users. If your instance already
 }
 ```
 
-# Step 2: Install and Configure CloudWatch Logs on an Existing Amazon EC2 Instance
+
+# Step 2: Configure an Alarm a SNS Topic and Subscription
+
+1. Click on the Amazon Simple Notification Service
+
+[AWS SNS Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsSNS.png?raw=true)
+
+2. Create a topic
+
+[AWS SNS Topic](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsTopic.png?raw=true)
+
+3.) Create a Subscription 
+
+[AWS Subscription](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/ansSubscription.png?raw=true)
+
+* Make sure the end point is protocol is https
+* Take the ARN from your previous topic and paste it into the ARN field
+* In the endpoint field, grab the endpoint from the integration builder in "Inbound from SNS" in your AWS Cloudwatch Communication Plan.
+
+[XM Comm Plan Outbound](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/outboundXM.png?raw=true)
+
+
+
+
+# Step 3: Install and Configure CloudWatch Logs on an Existing Amazon EC2 Instance
 
 The process for installing the CloudWatch Logs agent differs depending on whether your Amazon EC2 instance is running Amazon Linux, Ubuntu, CentOS, or Red Hat. Use the steps appropriate for the version of Linux on your instance. However, remember, in this example we are using a **Amazon Linux instance**
 
@@ -90,4 +114,6 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 
 7.) You should see your apache logs 
 ![AWS Apache Logs Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/logImage.png?raw=true)
+
+
 
