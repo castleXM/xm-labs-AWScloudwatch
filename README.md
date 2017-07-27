@@ -4,7 +4,7 @@
 
 # Step 1: Configure Your IAM Role or User for CloudWatch Logs
 
-The CloudWatch Logs agent supports IAM roles and users. If your instance already has an IAM role associated with it, make sure that you include the IAM policy below. If you don't already have an IAM role assigned to your instance, you can use your IAM credentials for the next steps or you can assign an IAM role to that instance. For more information, [see Attaching an IAM Role to an Instance]. (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#attach-iam-role)
+The CloudWatch Logs agent supports IAM roles and users. If your instance already has an IAM role associated with it, make sure that you include the IAM policy below. If you don't already have an IAM role assigned to your instance, you can use your IAM credentials for the next steps or you can assign an IAM role to that instance. For more information, [see Attaching an IAM Role to an Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#attach-iam-role).
 
 * To configure your IAM role or user for CloudWatch Logs
 
@@ -12,14 +12,33 @@ The CloudWatch Logs agent supports IAM roles and users. If your instance already
 
 1. In the navigation pane, choose Roles.
 
-Choose the role by selecting the role name (do not select the check box next to the name).
+1. Choose the role by selecting the role name (do not select the check box next to the name).
 
-On the Permissions tab, expand Inline Policies and choose the link to create an inline policy.
+1. On the Permissions tab, expand Inline Policies and choose the link to create an inline policy.
 
-On the Set Permissions page, choose Custom Policy, Select.
+1. On the Set Permissions page, choose Custom Policy, Select.
 
-For more information about creating custom policies, see IAM Policies for Amazon EC2 in the Amazon EC2 User Guide for Linux Instances.
+1. For more information about creating custom policies, see IAM Policies for Amazon EC2 in the Amazon EC2 User Guide for Linux Instances.
 
-On the Review Policy page, for Policy Name, type a name for the policy.
+1. On the Review Policy page, for Policy Name, type a name for the policy.
 
-For Policy Document, paste in the following policy:
+1. For Policy Document, paste in the following policy:
+
+``` {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+    ],
+      "Resource": [
+        "arn:aws:logs:*:*:*"
+    ]
+  }
+ ]
+}
+```
