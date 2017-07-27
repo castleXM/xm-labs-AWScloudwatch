@@ -54,17 +54,17 @@ The CloudWatch Logs agent supports IAM roles and users. If your instance already
 
 2. Create a topic
 
-[AWS SNS Topic](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsTopic.png?raw=true)
+[AWS SNS Topic Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsTopic.png?raw=true)
 
 3.) Create a Subscription 
 
-[AWS Subscription](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/ansSubscription.png?raw=true)
+[AWS Subscription Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/ansSubscription.png?raw=true)
 
 * Make sure the end point is protocol is https
 * Take the ARN from your previous topic and paste it into the ARN field
 * In the endpoint field, grab the endpoint from the integration builder in "Inbound from SNS" in your AWS Cloudwatch Communication Plan.
 
-[XM Comm Plan Outbound](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/outboundXM.png?raw=true)
+[XM Comm Plan Outbound Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/outboundXM.png?raw=true)
 
 
 
