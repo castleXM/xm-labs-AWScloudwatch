@@ -148,4 +148,17 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 ![AWS Alarm](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/alarm.png?raw=true)
 
 
+# Step 6: Stop Apache
+
+1. Log into your EC2 instance
+2. Type the following command ` sudo service httpd stop`
+3. Your Alarm should be triggered in Cloudwatch
+
+![Alarm State](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/alarm.png?raw=true)
+
+4. You should also get an alert from xMatters telling you Apache has stopped
+
+![xM Email](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/e-mail%20alert.png?raw=true)
+
+
 
