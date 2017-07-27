@@ -46,7 +46,7 @@ The CloudWatch Logs agent supports IAM roles and users. If your instance already
 ```
 
 
-# Step 2: Configure an Alarm a SNS Topic and Subscription
+# Step 2: Configure a SNS Topic and Subscription
 
 1. Click on the Amazon Simple Notification Service
 
