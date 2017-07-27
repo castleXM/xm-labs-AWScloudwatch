@@ -81,3 +81,13 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 * One the configuration is complete you should run `sudo service awslogs restart`
 
 ![Script logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/Screen%20Shot%202017-06-23%20at%203.15.52%20PM.png?raw=true)
+
+5. Head over to AWS Cloudwatch
+![AWS CloudWatch Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/cloudWatchImage.png?raw=true)
+
+6 Click on Logs
+![AWS Logs logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsLogsImage.png?raw=true)
+
+7.) You should see your apache logs 
+![AWS Apache Logs Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/logImage.png?raw=true)
+
