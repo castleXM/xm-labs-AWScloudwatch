@@ -62,6 +62,6 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 1. Update your Amazon Linux instance to pick up the latest changes in the package repositories.
 * `sudo yum update -y`
 * `sudo yum install -y awslogs`
-* ```region = us-east-1
-aws_access_key_id = <YOUR ACCESS KEY>
-aws_secret_access_key = <YOUR SECRET KEY>```
+* ``` region = us-east-1
+     aws_access_key_id = <YOUR ACCESS KEY>
+     aws_secret_access_key = <YOUR SECRET KEY> ```
