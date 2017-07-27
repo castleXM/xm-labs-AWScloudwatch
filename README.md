@@ -3,6 +3,11 @@
   
 In this lab, I am using a **Amazon Linux AMI**
 
+# Prerequisites 
+
+* You must download and import the AWS Communication Plan titled **AWSCloudWatch.zip** in this repo
+* Slight familiarity with AWS
+
 
 # Step 1: Configure Your IAM Role or User for CloudWatch Logs
 
