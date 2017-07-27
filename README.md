@@ -163,5 +163,14 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 
 ![xM Email](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/e-mail%20alert.png?raw=true)
 
+# Step 7: Monitoring the Docker Deamon in CloudWatch (optional)
+
+1. Run `sudo yum update -y`
+2. Install Docker by running `sudo yum install -y docker`
+3. The docker Deamon is located at `/var/log/docker`
+4. Repeat **Step 3** part **4** to log the docker deamon logs
+5. Repeat **Step 5** to configure your alarm in CloudWatch
+
+
 
 
