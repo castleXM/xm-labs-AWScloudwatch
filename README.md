@@ -1,7 +1,7 @@
 # AWS Cloudwatch
   Cloudwatch is an Amazon Web Service that is available when you spin up an EC2 instance. In order to configure this integration, you must sign up for an EC2 instance by going [Here](https://www.amazon.com/ap/signin?openid.assoc_handle=aws&openid.return_to=https%3A%2F%2Fsignin.aws.amazon.com%2Foauth%3Fresponse_type%3Dcode%26client_id%3Darn%253Aaws%253Aiam%253A%253A015428540659%253Auser%252Fiam%26redirect_uri%3Dhttps%253A%252F%252Fconsole.aws.amazon.com%252Fiam%252Fhome%253Fstate%253DhashArgs%252523%25252Fhome%2526isauthcode%253Dtrue%26noAuthCookie%3Dtrue&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&action=&disableCorpSignUp=&clientContext=&marketPlaceId=&poolName=&authCookies=&pageId=aws.ssop&siteState=registered%2Cen_US&accountStatusPolicy=P1&sso=&openid.pape.preferred_auth_policies=MultifactorPhysical&openid.pape.max_auth_age=120&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&server=%2Fap%2Fsignin%3Fie%3DUTF8&accountPoolAlias=&forceMobileApp=0&language=en_US&forceMobileLayout=0).
   
-In this lab, I am using a **Amazon Linux AMI*
+In this lab, I am using a **Amazon Linux AMI**
 
 
 # Step 1: Configure Your IAM Role or User for CloudWatch Logs
@@ -55,8 +55,13 @@ Starting with Amazon Linux AMI 2014.09, the CloudWatch Logs agent is available a
 
 ## Warning
 Do not update the CloudWatch Logs agent using the RPM installation method if you previously used the Python script to install the agent. Doing so may cause configuration issues that prevent the CloudWatch Logs agent from sending your logs to CloudWatch.
-Connect to your Amazon Linux instance. For more information, see Connect to Your Instance in the Amazon EC2 User Guide for Linux Instances.
+1. Connect to your Amazon Linux instance. For more information, see Connect to Your Instance in the [Amazon EC2 User Guide for Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-connect-to-instance-linux).
 
-If you have trouble connecting, see Troubleshooting Connecting to Your Instance in the Amazon EC2 User Guide for Linux Instances.
+If you have trouble connecting, see [Troubleshooting Connecting to Your Instance in the Amazon EC2 User Guide for Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html).
 
-Update your Amazon Linux instance to pick up the latest changes in the package repositories.
+1. Update your Amazon Linux instance to pick up the latest changes in the package repositories.
+* `sudo yum update -y`
+* `sudo yum install -y awslogs`
+* ```region = us-east-1
+aws_access_key_id = <YOUR ACCESS KEY>
+aws_secret_access_key = <YOUR SECRET KEY>```
