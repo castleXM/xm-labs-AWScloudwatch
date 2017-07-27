@@ -111,16 +111,16 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 5. Head over to AWS Cloudwatch
 ![AWS CloudWatch Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/cloudWatchImage.png?raw=true)
 
-6 Click on Logs
+6 *Click on Logs*
 ![AWS Logs logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsLogsImage.png?raw=true)
 
 7.) You should see your apache logs 
 ![AWS Apache Logs Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/logImage.png?raw=true)
 
 # Step 4: Configure a Metric in the Logs
-1. After your logs are being sent to CloudWatch, click on Logs
+1. After your logs are being sent to CloudWatch, In the CloudWatch console click on *Logs*
 2. Find your Apache logs
-3. Click on Create Metric
+3. Click on *Create Metric Filter*
 4. In the Filter Pattern type `shutting down`
 5. Define the Metric
 
@@ -137,8 +137,8 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 # Step 5: Configure a Alarm in CloudWatch
 
 1. Go back to the CloudWatch Console
-2. Click on Alarm
-3. Click on Create Alarm
+2. Click on *Alarm*
+3. Click on *Create Alarm*
 4. Name the alarm `apache is down`
 5. Description `Apache Web Service has stopped`
 6. Whenever: apacheShutDown is ` >=1 ` for ` 1 ` consecutive period
