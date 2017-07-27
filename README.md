@@ -59,7 +59,7 @@ Do not update the CloudWatch Logs agent using the RPM installation method if you
 
 If you have trouble connecting, see [Troubleshooting Connecting to Your Instance in the Amazon EC2 User Guide for Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html).
 
-1. Update your Amazon Linux instance to pick up the latest changes in the package repositories.
+2. Update your Amazon Linux instance to pick up the latest changes in the package repositories.
 * `sudo yum update -y`
 * `sudo yum install -y awslogs`
 * Edit the `/etc/awslogs/awscli.conf` file and in the [default] section, specify the region in which to view log data and add your credentials.
@@ -68,4 +68,6 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
      aws_access_key_id = <YOUR ACCESS KEY>
      aws_secret_access_key = <YOUR SECRET KEY> ```
  
-1. Next, we will need to configure which logs we want to track
+3. Next, we will need to configure which logs we want to track
+* We will do this by downloading the following script `wget https://s3.amazonaws.com/aws-cloudwatch/downloads/awslogs-agent-setup-v1.0.py`
+* And then running the following `sudo python ./awslogs-agent-setup-v1.0.py --region us-east-1`
