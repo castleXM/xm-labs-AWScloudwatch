@@ -54,9 +54,11 @@ The CloudWatch Logs agent supports IAM roles and users. If your instance already
 
 2. Create a topic
 
+
 ![AWS SNS Topic Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsTopic.png?raw=true)
 
 3.) Create a Subscription 
+
 
 ![AWS Subscription Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/ansSubscription.png?raw=true)
 
@@ -114,6 +116,20 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 
 7.) You should see your apache logs 
 ![AWS Apache Logs Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/logImage.png?raw=true)
+
+
+# Step 4: Configure a Alarm in CloudWatch
+
+1. Go back to the CloudWatch Console
+2. Click on Alarm
+3. Click on Create Alarm
+4. Name the alarm `apache is down`
+5. Description `Apache Web Service has stopped`
+6. Whenever: apacheShutDown is ` >=1 ` for ` 1 ` consecutive period
+7. Whenever this alarm: `State is ALARM`
+8. Send notification to `Send_to_XM`
+
+![AWS Alarm](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/alarm.png?raw=true)
 
 
 
