@@ -73,4 +73,4 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 * We will do this by downloading the following script `wget https://s3.amazonaws.com/aws-cloudwatch/downloads/awslogs-agent-setup-v1.0.py`
 * And then running the following `sudo python ./awslogs-agent-setup-v1.0.py --region us-east-1`
 
-![Script logo] (https://github.com/mpeters413/AWScloudwatch-docker/blob/master/Screen%20Shot%202017-06-23%20at%203.15.52%20PM.png?raw=true)
+![Script logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/Screen%20Shot%202017-06-23%20at%203.15.52%20PM.png?raw=true)
