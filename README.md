@@ -63,11 +63,11 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 * `sudo yum update -y`
 * `sudo yum install -y awslogs`
 * Edit the `/etc/awslogs/awscli.conf` file and in the [default] section, specify the region in which to view log data and add your credentials.
-  ``` 
-     region = us-east-1
+  ```region = us-east-1
      aws_access_key_id = <YOUR ACCESS KEY>
-     aws_secret_access_key = <YOUR SECRET KEY> ```
- 
-3. Next, we will need to configure which logs we want to track
+     aws_secret_access_key = <YOUR SECRET KEY> 
+     ```
+3. Install apache web service by running ` sudo yum install httpd`. One Apache is installed, start the service by running `service httpd start`
+4. Next, we will need to configure which logs we want to track
 * We will do this by downloading the following script `wget https://s3.amazonaws.com/aws-cloudwatch/downloads/awslogs-agent-setup-v1.0.py`
 * And then running the following `sudo python ./awslogs-agent-setup-v1.0.py --region us-east-1`
