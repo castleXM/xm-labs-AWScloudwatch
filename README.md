@@ -5,7 +5,7 @@ In this lab, I am using a **Amazon Linux AMI**
 
 # Prerequisites 
 
-* You must download and import the AWS Communication Plan titled **AWSCloudWatch.zip** in this repo
+* You must download and import the AWS Communication Plan titled **AWSCloudWatch.zip** into your xMatters instance. You can find the file in this repo
 * Slight familiarity with AWS
 
 
