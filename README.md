@@ -55,23 +55,23 @@ The CloudWatch Logs agent supports IAM roles and users. If your instance already
 
 1. Click on the Amazon Simple Notification Service
 
-![AWS SNS Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsSNS.png?raw=true)
+![AWS SNS Logo](media/awsSNS.png?raw=true)
 
 2. Create a topic
 
 
-![AWS SNS Topic Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsTopic.png?raw=true)
+![AWS SNS Topic Logo](media/awsTopic.png?raw=true)
 
 3.) Create a Subscription 
 
 
-![AWS Subscription Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/ansSubscription.png?raw=true)
+![AWS Subscription Logo](media/ansSubscription.png?raw=true)
 
 * Make sure the end point is protocol is https
 * Take the ARN from your previous topic and paste it into the ARN field
 * In the endpoint field, grab the endpoint from the integration builder in "Inbound from SNS" in your AWS Cloudwatch Communication Plan.
 
-![XM Comm Plan Outbound Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/outboundXM.png?raw=true)
+![XM Comm Plan Outbound Logo](media/outboundXM.png?raw=true)
 
 
 
@@ -111,19 +111,19 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 * Chose a timestamp for your output
 * One the configuration is complete you should run `sudo service awslogs restart`
 
-![Script logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/pythonScript.png?raw=true)
+![Script logo](media/pythonScript.png?raw=true)
 
 5. Head over to AWS Cloudwatch
 
-![AWS CloudWatch Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/cloudWatchAWS.png?raw=true)
+![AWS CloudWatch Logo](media/cloudWatchAWS.png?raw=true)
 
 6 *Click on Logs*
 
-![AWS Logs logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/awsLogsImage.png?raw=true)
+![AWS Logs logo](media/awsLogsImage.png?raw=true)
 
 7.) You should see your apache logs 
 
-![AWS Apache Logs Logo](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/logImage.png?raw=true)
+![AWS Apache Logs Logo](media/logImage.png?raw=true)
 
 # Step 4: Configure a Metric in the Logs
 1. After your logs are being sent to CloudWatch, In the CloudWatch console click on *Logs*
@@ -132,13 +132,13 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 4. In the Filter Pattern type `shutting down`
 5. Define the Metric
 
-![Define Metric](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/defineMetric.png?raw=true)
+![Define Metric](media/defineMetric.png?raw=true)
 
 
 6. Name the filter `shutting-down`
 7. Name the Metric `apacheShutDown`
 
-![Assign Metric](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/assignMetric.png?raw=true)
+![Assign Metric](media/assignMetric.png?raw=true)
 
 
 
@@ -153,7 +153,7 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 7. Whenever this alarm: `State is ALARM`
 8. Send notification to `Send_to_XM`
 
-![AWS Alarm](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/alarm.png?raw=true)
+![AWS Alarm](media/alarm.png?raw=true)
 
 
 # Step 6: Stop Apache
@@ -162,11 +162,11 @@ If you have trouble connecting, see [Troubleshooting Connecting to Your Instance
 2. Type the following command ` sudo service httpd stop`
 3. Your Alarm should be triggered in Cloudwatch
 
-![Alarm State](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/alarmState.png?raw=true)
+![Alarm State](media/alarmState.png?raw=true)
 
 4. You should also get an alert from xMatters telling you Apache has stopped
 
-![xM Email](https://github.com/mpeters413/AWScloudwatch-docker/blob/master/e-mail%20alert.png?raw=true)
+![xM Email](media/e-mail%20alert.png?raw=true)
 
 # Step 7: Monitoring the Docker Deamon in CloudWatch (optional)
 
