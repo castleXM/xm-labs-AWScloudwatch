@@ -3,6 +3,15 @@
   
 In this lab, I am using a **Amazon Linux AMI**
 
+---------
+
+<kbd>
+  <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+</kbd>
+
+---------
+
+
 # Prerequisites 
 
 * You must download and import the AWS Communication Plan titled **AWSCloudWatch.zip** into your xMatters instance. You can find the file in this repo
