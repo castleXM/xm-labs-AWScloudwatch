@@ -38,7 +38,12 @@ To import the communication plan:
 1. Import the [AWSCloudWatch.zip](AWSCloudWatch.zip) communications plan.
 1. Next to the **AWS - CloudWatch** comm plan, click Edit > Access Permissions and give access to the user created in step 2.
 1. Click Edit > Forms and next to the **CloudWatch Alarm** form, click Edit > Sender Permissions and give access to the user created in step 2.
-1. Navigate to the Integration Builder tab and expand the Inbound Integrations section. Click on **Inbound from SNS**  and copy the URL at the bottom.
+1. Click Edit > Layout next to the **Subscription Confirmation** form. Enter **your username** in the Recipients section. (This will be used later to receive the subscription confirmation url.)
+1. Navigate to the Flows tab and click on the **CloudWatch Alarm** flow. After the canvas is displayed, double click on the **CloudWatch Alarm - Inbound SNS** step and copy the URL at the bottom:
+
+<kbd>
+  <img src="media/flowTrigger.png" width="550">
+</kbd>
 
 
 ## AWS
@@ -58,7 +63,7 @@ To import the communication plan:
    <img src="media/awsTopic.png" width="550">
 </kbd>
 
-3.) Create a Subscription 
+3. Create a Subscription. 
 
 
 <kbd>
@@ -67,7 +72,34 @@ To import the communication plan:
 
 * Make sure the endpoint protocol is https
 * Take the ARN from the topic above and paste it into the ARN field
-* In the endpoint field, use the endpoint from the **Inbound from SNS** inbound integration builder integration in your AWS Cloudwatch Communication Plan.
+* In the endpoint field, use the url copied from the **Inbound from SNS** HTTP Trigger in the Flow Designer above. 
+* Once the subscription is saved, a confirmation will be fired, however, if you don't see an email, the confirmation can be re-triggered by selecting the subscription and clicking the **Request Confirmation**. 
+
+<kbd>
+	<img src="media/snsSubscriptionConf.png" width="400">
+</kbd>
+
+5. You will receive a new email from xMatters with the Subscription Confirmation URL
+
+<kbd>
+  <img src="media/snsSubscriptionConf2.png" width="400">
+</kbd>
+
+6. Click the Subscription URL link and an XML file will be displayed:
+
+<kbd>
+	<img src="media/snsSubscriptionConf3.png" width="400">
+</kbd>
+
+And the subscription will show a subscription ARN instead of the `PendingConfirmation` and the Status will be updated. The page may need to be refreshed to see the updated status. 
+
+<kbd>
+	<img src="media/snsSubscriptionConf4.png" width="400">
+</kbd>
+
+
+
+
 
 ### Step 2: Configure an Alarm in CloudWatch
 
