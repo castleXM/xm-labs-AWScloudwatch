@@ -76,7 +76,7 @@ To import the communication plan:
 * Once the subscription is saved, a confirmation will be fired, however, if you don't see an email, the confirmation can be re-triggered by selecting the subscription and clicking the **Request Confirmation**. 
 
 <kbd>
-	<img src="media/snsSubscriptionConf.png" width="400">
+  <img src="media/snsSubscriptionConf.png" width="400">
 </kbd>
 
 5. You will receive a new email from xMatters with the Subscription Confirmation URL
@@ -88,13 +88,13 @@ To import the communication plan:
 6. Click the Subscription URL link and an XML file will be displayed:
 
 <kbd>
-	<img src="media/snsSubscriptionConf3.png" width="400">
+  <img src="media/snsSubscriptionConf3.png" width="400">
 </kbd>
 
 And the subscription will show a subscription ARN instead of the `PendingConfirmation` and the Status will be updated. The page may need to be refreshed to see the updated status. 
 
 <kbd>
-	<img src="media/snsSubscriptionConf4.png" width="400">
+  <img src="media/snsSubscriptionConf4.png" width="400">
 </kbd>
 
 
@@ -118,7 +118,7 @@ And the subscription will show a subscription ARN instead of the `PendingConfirm
 
 # Testing
 
-Spike the CPU on an ec2 instance, or otherwise trigger the criteria in the `Whenever` section of the alarm. Then, check the Activity Stream in the **Inbound from SNS** inbound integration. There should be a new entry and a resulting event generated, targeting the recipients set in the Form Layout. 
+Spike the CPU on an ec2 instance, or otherwise trigger the criteria in the `Whenever` section of the alarm. Then, check the Activity Stream in the **Inbound from SNS** inbound integration. There should be a new entry and a resulting event generated, targeting the recipients set in the form. 
 
 # Troubleshooting
 
