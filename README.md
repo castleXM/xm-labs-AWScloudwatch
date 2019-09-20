@@ -64,7 +64,15 @@ To import the communication plan:
 </kbd>
 
 3. Create a Subscription. 
+**Note**: If you would like to override the default recipients defined in the Form Layout in step 6 above, append `&recipients=MyAWESOMEGroup`. For example, if this is the HTTP Trigger url:
 
+`https://acme.xmatters.com/api/integration/1/functions/23cba8b4-a7c2-91d2-ab15-82db3f9a35a7/triggers?apiKey=aebd0bdc-c918-4a51-8984-82db3f9a35a7`
+
+Then append the `&recipients` to make it look like so:
+
+`https://acme.xmatters.com/api/integration/1/functions/23cba8b4-a7c2-91d2-ab15-82db3f9a35a7/triggers?apiKey=aebd0bdc-c918-4a51-8984-82db3f9a35a7&recipients=MyAWESOMEGroup`
+
+This recipients value will be parsed from the parameters and used as the target for both the confirmation event as well as alarm events. Update this value to map different subscriptions to different groups. 
 
 <kbd>
    <img src="media/snsSubscription.png" width="550">
