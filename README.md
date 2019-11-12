@@ -1,5 +1,5 @@
-# AWS CloudWatch
-  CloudWatch is an Amazon Web Service for monitoring the AWS resources and the customer applications running on the Amazon infrastructure.
+# Amazon CloudWatch
+  Amazone CloudWatch is an AWS Service for monitoring AWS resources and the customer applications running on the AWS infrastructure.
   
 
 ---------
@@ -20,7 +20,7 @@
 
 
 # How it works
-When a CloudWatch Alarm condition is met, an Simple Notification Service (SNS) message is published and picked up by the SNS subscription. The subscription is tied to a Topic, which generates a webhook to the xMatters inbound integration. 
+When a CloudWatch Alarm condition is met, a Amazon Simple Notification Service (SNS) message is published and picked up by the SNS subscription. The subscription is tied to a Topic, which generates a webhook to the xMatters inbound integration. 
 
 # Installation
 
