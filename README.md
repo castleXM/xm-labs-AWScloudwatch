@@ -34,12 +34,21 @@ The next step is to import the communication plan.
 To import the communication plan:
 
 1. Login to xMatters as a Developer and create a new user.
-1. Create a new REST user. See details [here](https://help.xmatters.com/integrations/xmatters/configuringxmatters.htm#Create)
-1. Import the [AWSCloudWatch.zip](AWSCloudWatch.zip) communications plan.
-1. Next to the **AWS - CloudWatch** comm plan, click Edit > Access Permissions and give access to the user created in step 2.
-1. Click Edit > Forms and next to the **CloudWatch Alarm** form, click Edit > Sender Permissions and give access to the user created in step 2. Repeat for the **Subscription Confirmation** form. 
-1. Click Edit > Layout next to the **Subscription Confirmation** form. Enter **your username** in the Recipients section. (This will be used later to receive the subscription confirmation url.)
-1. Navigate to the Flows tab and click on the **CloudWatch Alarm** flow. After the canvas is displayed, double click on the **CloudWatch Alarm - Inbound SNS** step and copy the URL at the bottom:
+2. Create a new REST user. See details [here](https://help.xmatters.com/integrations/xmatters/configuringxmatters.htm#Create)
+3. Import the [AWSCloudWatch.zip](AWSCloudWatch.zip) communications plan.
+4. Next to the **AWS - CloudWatch** workflow, click Edit > Editor Permissions and give access to the user created in step 2.
+<kbd>
+  <img src="media/editor_permissions.png" width="400">
+</kbd>
+
+5. Click on the  **AWS - CloudWatch** workflow and next to the **Cloudwatch Alarm**, click Web Service > Sender Permissions and give access to the user created in step 2. Repeat for the **Subscription Confirmation** form. 
+
+<kbd>
+  <img src="media/sender_permissions.png" width="400">
+</kbd>
+
+6. Click Edit > Layout next to the **Subscription Confirmation** form. Enter **your username** in the Recipients section. (This will be used later to receive the subscription confirmation url.)
+7. Navigate to the Flows tab and click on the **CloudWatch Alarm** flow. After the canvas is displayed, double click on the **CloudWatch Alarm - Inbound SNS** step and copy the URL at the bottom:
 
 <kbd>
   <img src="media/flowTrigger.png" width="550">
