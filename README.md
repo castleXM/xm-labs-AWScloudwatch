@@ -125,13 +125,26 @@ And the subscription will show a subscription ARN instead of the `PendingConfirm
 3. Click on **Create Alarm**
 4. Give the alarm a good name and descriptive description
 5. Set the "Whenever" information to the criteria you need to monitor. For example, `CPUUtilization > 0.9 for 4 out of 5 datapoints`. 
-7. Whenever this alarm: `State is ALARM`
+7. Whenever this alarm state is: `in Alarm`
 8. Send notification to `Send_to_XM`
 
 <kbd>
-   <img src="media/alarm.png" width="550">
+   <img src="media/alarm.png" width="600">
 </kbd>
 
+9. Save the alarm.
+
+### Step 3: Configure OK in CloudWatch
+
+1. From the **Alarms** page, click on your newly created alarm, then click **Edit**. 
+2. Click **Next** at the bottom of the **Specify metric and conditions** page.
+3. Click **Add Notification** and select Whenever this alarm state is: `in Alarm`
+8. select an existing SNS topic and select `Send_to_XM`.
+5. Click **Update alarm** to save the changes:
+
+<kbd>
+   <img src="media/alarm-ok.png" width="600">
+</kbd>
 
 # Testing
 
