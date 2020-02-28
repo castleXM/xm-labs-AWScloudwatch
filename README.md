@@ -16,7 +16,7 @@
 * An AWS Account - If you don't have one, [get one!](https://portal.aws.amazon.com/billing/signup#/start)
 
 # Files
-* [AWSCloudWatch.zip](AWSCloudWatch.zip) - The Comm Plan containing the forms and integration scripts
+* [AWSCloudWatch.zip](AWSCloudWatch.zip) - The Workflow containing the forms and flow canvas
 
 
 # How it works
